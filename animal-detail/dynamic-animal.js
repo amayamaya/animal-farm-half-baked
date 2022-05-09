@@ -7,10 +7,10 @@ const imageEl = document.getElementById('image');
 const sayingEl = document.getElementById('saying');
 
 const params = new URLSearchParams(window.location.search);
-console.log(params.get('id'), animals);
+// console.log(params.get('id'), animals);
 
 const animalParam = findById(params.get('id'), animals);
-console.log(animalParam);
+// console.log(animalParam);
 
 nameEl.textContent = animalParam.name; 
 imageEl.src = `../assets/${animalParam.type}.svg`;

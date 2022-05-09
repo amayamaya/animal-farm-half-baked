@@ -13,7 +13,11 @@ export function renderListItem(animal) {
 
     const span = document.createElement('span');
     span.textContent = animal.says;
+    
+    const a = document.createElement('a');
+    a.href = `./animal-detail/?id=${animal.id}`;
 
-    div.append(img, nameSpan, span);
+    a.append(img, nameSpan, span);
+    div.append(a);
     return div;
 }
